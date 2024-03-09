@@ -42,7 +42,7 @@ const HeroBanner = () => {
         fontSize="200px">
             Exercises
       </Typography>
-      <img src={HeroBannerImage} class="hero-banner-img" 
+      <img src={HeroBannerImage} className="hero-banner-img" 
       alt="Athletic female"/>
     </Box>
   );
