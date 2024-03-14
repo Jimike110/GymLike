@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Pagination from "@mui/material/Pagination";
 import { Box, Stack, Typography } from "@mui/material";
 import ExerciseCard from "./ExerciseCard";
-import { exerciseOptions, fetchData } from "../utils/fetchData";
+import { fetchData } from "../utils/fetchData";
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -22,9 +22,9 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       let exercisesData = [];
 
       if (bodyPart === 'all') {
-        exercisesData = await fetchData("https://exercisedb.p.rapidapi.com/exercises?limit=10000", exerciseOptions);
+        exercisesData = await fetchData("all");
       } else {
-        exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}?limit=10000`, exerciseOptions);
+        exercisesData = await fetchData("bodyPart", bodyPart);
       }
       setExercises(exercisesData);
     }

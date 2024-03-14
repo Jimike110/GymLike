@@ -1,11 +1,26 @@
-import React from 'react';
+import React from "react";
+import { Box, Stack, Typography } from "@mui/material";
 
-const ExerciseVideos = () => {
-    return (
-        <div>
-            <h1>Exercise Videos</h1>
-        </div>
-    )
-}
+const ExerciseVideos = ({ exerciseVideos, name }) => {
+  return (
+    <Box>
+      <Typography variant="h4">Related videos for: {name}</Typography>
+      <Stack direction="row">
+        {exerciseVideos?.slice(0, 6).map((exerciseVideo, index) => (
+          console.log("Video ID: ", exerciseVideo.video.videoId),
+          <a
+            key={index}
+            className="exercise-video"
+            href={`https://www.youtube.com/watch/v=?${exerciseVideo.video.videoId}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={exerciseVideo.video.thumbnails[0].url} alt={exerciseVideo.video.title} />
+          </a>
+        ))}
+      </Stack>
+    </Box>
+  );
+};
 
-export default ExerciseVideos
+export default ExerciseVideos;
