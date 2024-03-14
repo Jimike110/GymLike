@@ -10,14 +10,15 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
   useEffect(() => {
     setBodyParts([
       "all",
-      "chest",
       "back",
-      "shoulder",
-      "neck",
+      "cardio",
+      "chest",
       "lower arms",
+      "lower legs",
+      "neck",
+      "shoulders",
       "upper arms",
-      "lower back",
-      "upper back",
+      "upper legs",
       "waist",
     ]);
   }, []);
