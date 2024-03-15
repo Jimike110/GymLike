@@ -13,6 +13,7 @@ const ExerciseDetail = () => {
 
   useEffect(() => {
     const fetchExerciseDetail = async () => {
+      window.scrollTo(0, 0);
       const exerciseDetailData = await fetchData("id", id);
       setExerciseDetail(exerciseDetailData[0]);
       const youtubeSearchUrl = "https://youtube-search-and-download.p.rapidapi.com";
