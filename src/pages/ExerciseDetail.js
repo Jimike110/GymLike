@@ -16,12 +16,19 @@ const ExerciseDetail = () => {
       window.scrollTo(0, 0);
       const exerciseDetailData = await fetchData("id", id);
       setExerciseDetail(exerciseDetailData);
+  
       const youtubeSearchUrl = "https://youtube-search-and-download.p.rapidapi.com";
-      const exerciseVideosData = await fetchYoutubeData(`${youtubeSearchUrl}/search?query=${exerciseDetailData.name}`, youtubeOptions);
+      let query = exerciseDetailData.name;
+      if (navigator.language === "ru") {
+        query += " тренировка"; // Added "workout" to the query for Russian language
+      }
+  
+      const exerciseVideosData = await fetchYoutubeData(`${youtubeSearchUrl}/search?query=${query}&sort=r`, youtubeOptions);
       setExerciseVideos(exerciseVideosData.contents);
     }
     fetchExerciseDetail();
   }, [id]);
+  
   
   return (
     <Box>
