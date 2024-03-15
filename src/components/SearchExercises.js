@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
-import { fetchData } from "../utils/fetchData";
+import { fetchData, multiLang } from "../utils/fetchData";
 import HorizontalScrollbar from "./HorizontalScrollbar";
 
 const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
@@ -8,19 +8,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
   const [bodyParts, setBodyParts] = useState([]);
 
   useEffect(() => {
-    setBodyParts([
-      "all",
-      "back",
-      "cardio",
-      "chest",
-      "lower arms",
-      "lower legs",
-      "neck",
-      "shoulders",
-      "upper arms",
-      "upper legs",
-      "waist",
-    ]);
+    setBodyParts(multiLang());
   }, []);
 
   const handleSearch = async () => {

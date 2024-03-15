@@ -10,14 +10,14 @@ const ExerciseDetail = () => {
   const [exerciseDetail, setExerciseDetail] = useState({});
   const [exerciseVideos, setExerciseVideos] = useState([]);
   const { id } = useParams();
-
+  
   useEffect(() => {
     const fetchExerciseDetail = async () => {
       window.scrollTo(0, 0);
       const exerciseDetailData = await fetchData("id", id);
-      setExerciseDetail(exerciseDetailData[0]);
+      setExerciseDetail(exerciseDetailData);
       const youtubeSearchUrl = "https://youtube-search-and-download.p.rapidapi.com";
-      const exerciseVideosData = await fetchYoutubeData(`${youtubeSearchUrl}/search?query=${exerciseDetailData[0].name}`, youtubeOptions);
+      const exerciseVideosData = await fetchYoutubeData(`${youtubeSearchUrl}/search?query=${exerciseDetailData.name}`, youtubeOptions);
       setExerciseVideos(exerciseVideosData.contents);
     }
     fetchExerciseDetail();
