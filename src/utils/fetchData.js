@@ -1,7 +1,7 @@
 import exercisesData from "../data/exercises.json";
 
-const langs = navigator.languages;
-const lang = navigator.language;
+// const langs = navigator.languages;
+// const lang = navigator.language;
 
 export const youtubeOptions = {
   method: 'GET',
