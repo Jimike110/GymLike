@@ -6,8 +6,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
     <Box>
       <Typography variant="h4">Related videos for: {name}</Typography>
       <Stack direction="row">
-        {exerciseVideos?.slice(0, 6).map((exerciseVideo, index) => (
-          console.log("Video ID: ", exerciseVideo.video.videoId),
+        {exerciseVideos?.slice(1, 6).map((exerciseVideo, index) => (
           <a
             key={index}
             className="exercise-video"

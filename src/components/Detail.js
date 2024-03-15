@@ -15,6 +15,7 @@ const Detail = ({ exerciseDetail }) => {
   ];
 
   return (
+    console.log("Exercise gif: ", gifUrl),
     <Stack
       gap="60px"
       sx={{ flexDirection: { lg: "row" }, p: "20px", alignItems: "center" }}
