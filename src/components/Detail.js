@@ -49,8 +49,8 @@ const Detail = ({ exerciseDetail }) => {
               sx={{
                 background: "#FFF2DB",
                 borderRadius: "50%",
-                width: "100px",
-                height: "100px",
+                width: "80px",
+                height: "80px",
               }}
             >
               <img

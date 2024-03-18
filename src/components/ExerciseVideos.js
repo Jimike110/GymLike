@@ -16,7 +16,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
             target="_blank"
             rel="noreferrer"
           >
-            <img style={{ borderTopLeftRadius: '20px' }} src={item.video.thumbnails[0].url} alt={item.video.title} loading="lazy" />
+            <img style={{ borderTopLeftRadius: '20px' }} src={item.video.thumbnails[0].url} alt={item.video.title} />
             <Box>
               <Typography sx={{ fontSize: { lg: '25px', xs: '18px' } }} fontWeight={600} color="#000">
                 {item.video.title}
