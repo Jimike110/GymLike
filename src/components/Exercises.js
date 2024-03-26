@@ -9,25 +9,28 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   const exercisesPerPage = 9;
   const indexOfLastExercise = currentPage * exercisesPerPage;
   const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
-  const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
+  const currentExercises = exercises.slice(
+    indexOfFirstExercise,
+    indexOfLastExercise
+  );
 
   const paginate = (e, value) => {
-    setCurrentPage(value); 
+    setCurrentPage(value);
 
-    document.getElementById("exercises").scrollIntoView({behavior: "smooth"});
-  }
+    document.getElementById("exercises").scrollIntoView({ behavior: "smooth" });
+  };
 
   useEffect(() => {
     const fetchExercisesData = async () => {
       let exercisesData = [];
 
-      if (bodyPart === 'all') {
+      if (bodyPart === "all") {
         exercisesData = await fetchData("all");
       } else {
         exercisesData = await fetchData("bodyPart", bodyPart);
       }
       setExercises(exercisesData);
-    }
+    };
     fetchExercisesData();
     setCurrentPage(1);
   }, [bodyPart, setExercises]);

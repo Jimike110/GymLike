@@ -30,7 +30,9 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => (
     }
     onClick={() => {
       setBodyPart(item);
-      document.getElementById("exercises").scrollIntoView({behavior: "smooth"});
+      document
+        .getElementById("exercises")
+        .scrollIntoView({ behavior: "smooth" });
     }}
   >
     <img src={Icon} alt="dumbbell" style={{ width: "40px", height: "40px" }} />
