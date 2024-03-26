@@ -39,10 +39,14 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
         sx={{ fontSize: { lg: "44px", xs: "30px" } }}
         mb="49px"
         textAlign="center"
+        className="ibm-plex"
       >
-        Awesome Exercises You <br /> Should Know
+        <sans-bold>
+          Awesome Exercises You <br /> Should Know
+        </sans-bold>
       </Typography>
-      <Box position="relative" mb="72px">
+      <Box className="ibm-plex" position="relative" mb="72px">
+        <sans-regular>
         <TextField
           height="76px"
           sx={{
@@ -56,6 +60,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
           placeholder="Search Exercises"
           type="text"
         />
+        </sans-regular>
         <Button
           className="search-btn"
           sx={{

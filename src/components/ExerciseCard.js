@@ -12,6 +12,7 @@ const ExerciseCard = ({ exercise }) => {
       />
       <Stack direction="row">
         <Button
+        className="ibm-plex"
           sx={{
             ml: "21px",
             color: "#FFF",
@@ -21,9 +22,12 @@ const ExerciseCard = ({ exercise }) => {
             textTransform: "capitalize",
           }}
         >
+          <sans-light>
           {exercise.bodyPart}
+          </sans-light>
         </Button>
         <Button
+        className="ibm-plex"
           sx={{
             ml: "21px",
             color: "#FFF",
@@ -33,7 +37,9 @@ const ExerciseCard = ({ exercise }) => {
             textTransform: "capitalize",
           }}
         >
+          <sans-light>
           {exercise.target}
+          </sans-light>
         </Button>
       </Stack>
       <Typography
@@ -41,11 +47,14 @@ const ExerciseCard = ({ exercise }) => {
         color="#000"
         fontWeight="bold"
         mt="11px"
-        pb="10px"
+        pb="11px"
         textTransform="capitalize"
-        fontSize="22px"
+        fontSize="24px"
+        className="ibm-plex"
       >
+        <sans-semibold>
         {exercise.name}
+        </sans-semibold>
       </Typography>
     </Link>
   );

@@ -1,17 +1,92 @@
 body {
-    font-family: 'Oswald', sans-serif;
+    /* font-family: 'Oswald', sans-serif; */
     background-color: #FFFAFB;
+    width: min(100%, 1300px);
+    margin: 0 auto;
   }
   
   * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
   }
   
   ::-webkit-scrollbar {
     width: 0px;
+  }
+
+  .ibm-plex sans-light {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .ibm-plex sans-regular {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .ibm-plex sans-medium {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .ibm-plex sans-semibold {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .ibm-plex sans-bold {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .ibm-plex sans-light-italic {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .ibm-plex sans-regular-italic {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .ibm-plex sans-medium-italic {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .ibm-plex sans-semibold-italic {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .ibm-plex sans-bold-italic {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }  
+
+  Button:hover {
+    background-color: #ff5664 !important;
+    color: white !important;
+  }
+
+  .hero-box {
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+    justify-content: center;
+    align-items: center;
   }
   
   .right-arrow,
@@ -54,18 +129,13 @@ body {
   }
   
   .hero-banner-img {
-    position: absolute;
-    right: 40px;
-    top: 0px;
-    width: 700px;
-    height: 900px;
-    margin-top: -330px;
-  
+    width: min(100%, 700px);
+    height: auto;
   }
   
   .exercise-card {
     width: 400px;
-    height: 445px;
+    min-height: 445px;
     background: #fff;
     border-top: 4px solid #FF2625;
     border-bottom-left-radius: 20px;
@@ -92,10 +162,15 @@ body {
   .bodyPart-card:hover {
     transform: scale(1.1, 1.1);
   }
+
+  .exercise-card:hover sans-semibold {
+    color: #ff5664
+  }
   
   .search-btn:hover {
-    color: #FF2625 !important;
+    color: #FFF !important;
     border: 1px solid #FF2625 !important;
+    background-color: #FF2625 !important;
   }
   
   .exercise-video {
@@ -123,10 +198,6 @@ body {
       position: static !important;
     }
   
-    .hero-banner-img {
-      display: none;
-    }
-  
     .exercise-card {
       width: 320px;
     }
@@ -141,5 +212,20 @@ body {
   @media screen and (max-width:400px) {
     .exercise-card {
       width: 280px;
+    }
+  }
+
+  @media screen and (min-width: 720px) {
+    .hero-box {
+      flex-direction: row;
+    }
+    .hero-banner-img {
+      margin-top: -110px;
+      margin-right: -50px;
+    }
+    .exercises {
+      position: relative;
+      top: -13rem;
+      z-index: -9999;
     }
   }
