@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
-import { fetchData, multiLang } from "../utils/fetchData";
+import { fetchData, multiLang, bodyPartsImagesFn } from "../utils/fetchData";
 import HorizontalScrollbar from "./HorizontalScrollbar";
 
 const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
   const [search, setSearch] = useState("");
   const [bodyParts, setBodyParts] = useState([]);
+  const [bodyPartsImages, setBodyPartsImages] = useState([]);
 
   useEffect(() => {
     setBodyParts(multiLang());
+    setBodyPartsImages(bodyPartsImagesFn());
   }, []);
 
   const handleSearch = async () => {
@@ -84,6 +86,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
           isBodyParts
           setBodyPart={setBodyPart}
           bodyPart={bodyPart}
+          bodyPartsImages={bodyPartsImages}
         />
       </Box>
     </Stack>

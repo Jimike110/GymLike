@@ -1,8 +1,7 @@
 import React from "react";
 import { Stack, Typography } from "@mui/material";
-import Icon from "../assets/icons/gym.png";
 
-const BodyPart = ({ item, setBodyPart, bodyPart }) => (
+const BodyPart = ({ item, setBodyPart, bodyPart, bodyPartsImages }) => (
   <Stack
     type="button"
     alignItems="center"
@@ -35,7 +34,7 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => (
         .scrollIntoView({ behavior: "smooth" });
     }}
   >
-    <img src={Icon} alt="dumbbell" style={{ width: "40px", height: "40px" }} />
+    <img src={bodyPartsImages} alt="dumbbell" style={{ width: "50px", height: "50px" }} />
     <Typography
       fontSize="24px"
       fontWeight="bold"

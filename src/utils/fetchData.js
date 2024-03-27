@@ -7,37 +7,60 @@ let selectedExercisesData;
 if (navigator.language === "ru") {
   selectedExercisesData = exercisesDataRussian;
   allBodyParts = [
-    "все",
-    "назад",
-    "кардио",
-    "грудь",
-    "нижние рычаги",
-    "голени",
-    "шея",
-    "плечи",
-    "верхняя часть ног",
-    "талия",
+    [
+      "все",
+      "назад",
+      "кардио",
+      "грудь",
+      "нижние рычаги",
+      "голени",
+      "шея",
+      "плечи",
+      "верхняя часть ног",
+      "талия",
+    ],
+    [
+      `${process.env.PUBLIC_URL}/icons/all.png`,
+      `${process.env.PUBLIC_URL}/icons/back.png`,
+      `${process.env.PUBLIC_URL}/icons/cardio.png`,
+    ],
   ];
 } else {
   selectedExercisesData = exercisesData;
   allBodyParts = [
-    "all",
-    "back",
-    "cardio",
-    "chest",
-    "lower arms",
-    "lower legs",
-    "neck",
-    "shoulders",
-    "upper arms",
-    "upper legs",
-    "waist",
+    [
+      "all",
+      "back",
+      "cardio",
+      "chest",
+      "lower arms",
+      "lower legs",
+      "neck",
+      "shoulders",
+      "upper arms",
+      "upper legs",
+      "waist",
+    ],
+    [
+      `${process.env.PUBLIC_URL}/icons/all.png`,
+      `${process.env.PUBLIC_URL}/icons/back.png`,
+      `${process.env.PUBLIC_URL}/icons/cardio.png`,
+      `${process.env.PUBLIC_URL}/icons/chest.png`,
+      `${process.env.PUBLIC_URL}/icons/forearm.png`,
+      `${process.env.PUBLIC_URL}/icons/lower-leg.png`,
+      `${process.env.PUBLIC_URL}/icons/neck.png`,
+
+    ],
   ];
 }
 
 export const multiLang = () => {
-  return allBodyParts;
+  return allBodyParts[0];
 };
+
+export const bodyPartsImagesFn = () => {
+  return allBodyParts[1];
+}
 
 export const youtubeOptions = {
   method: "GET",
