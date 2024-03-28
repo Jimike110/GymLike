@@ -22,6 +22,7 @@ const HeroBanner = () => {
         fontSize="22px"
         letterSpacing={7}
         wordSpacing={15}
+        pt="30px"
       >
         FITNESS CLUB
       </Typography>

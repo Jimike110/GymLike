@@ -25,16 +25,18 @@ const Detail = ({ exerciseDetail }) => {
         loading="lazy"
         className="detail-image"
       />
-      <Stack sx={{ gap: { lg: "35px", xs: "20px" } }}>
+      <Stack className="ibm-plex" sx={{ gap: { lg: "35px", xs: "20px" } }}>
         <Typography textTransform="capitalize" variant="h3">
-          {name}
+          <sans-semibold>{name}</sans-semibold>
         </Typography>
-        <Typography variant="h6">
+        <Typography ml="20px" variant="h6">
           {instructions &&
             instructions.map((instruction, index) => (
-              <ul key={index}>
-                <li>{instruction}</li>
-              </ul>
+              <sans-regular>
+                <ul key={index}>
+                  <li>{instruction}</li>
+                </ul>
+              </sans-regular>
             ))}
         </Typography>
         {extraDetail.map((detail, index) => (
@@ -49,18 +51,18 @@ const Detail = ({ exerciseDetail }) => {
               sx={{
                 background: "#FFF2DB",
                 borderRadius: "50%",
-                width: "80px",
-                height: "80px",
+                width: "60px",
+                height: "60px",
               }}
             >
               <img
                 src={detail.icon}
                 alt={bodyPart}
-                style={{ width: "50px", height: "50px" }}
+                style={{ width: "40px", height: "40px" }}
               />
             </Button>
-            <Typography textTransform="capitalize" variant="h5">
-              {detail.name}
+            <Typography textTransform="capitalize" variant="h6">
+              <sans-medium>{detail.name}</sans-medium>
             </Typography>
           </Stack>
         ))}
