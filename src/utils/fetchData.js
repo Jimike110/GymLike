@@ -49,7 +49,10 @@ if (navigator.language === "ru") {
       `${process.env.PUBLIC_URL}/icons/forearm.png`,
       `${process.env.PUBLIC_URL}/icons/lower-leg.png`,
       `${process.env.PUBLIC_URL}/icons/neck.png`,
-
+      `${process.env.PUBLIC_URL}/icons/shoulder.png`,
+      `${process.env.PUBLIC_URL}/icons/upper-arm.png`,
+      `${process.env.PUBLIC_URL}/icons/upper-leg.png`,
+      `${process.env.PUBLIC_URL}/icons/waist.png`,
     ],
   ];
 }
