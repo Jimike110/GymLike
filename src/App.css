@@ -1,15 +1,12 @@
 body {
-    /* font-family: 'Oswald', sans-serif; */
+    font-family: 'IBM Plex Sans', sans-serif;
     background-color: #FFFAFB;
-    width: min(100%, 1300px);
-    margin: 0 auto;
   }
   
   * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    /* font-family: "Poppins", sans-serif; */
   }
   
   ::-webkit-scrollbar {

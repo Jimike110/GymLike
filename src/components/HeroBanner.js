@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import HeroBannerImage from "../assets/images/banner.png";
+import { multiLangTextsFn } from "../utils/fetchData";
 
 const HeroBanner = () => {
   return (
@@ -24,7 +25,7 @@ const HeroBanner = () => {
         wordSpacing={15}
         pt="30px"
       >
-        FITNESS CLUB
+        { multiLangTextsFn().hero_supertitle }
       </Typography>
       <Typography
         className="ibm-plex"
@@ -33,12 +34,12 @@ const HeroBanner = () => {
         mt="30px"
       >
         <sans-bold>
-          Sweat, Smile <br /> and Repeat
+          { multiLangTextsFn().hero_title_1 } <br /> { multiLangTextsFn().hero_title_2 }
         </sans-bold>
       </Typography>
       <Typography fontSize="22px" lineHeight="35px" className="ibm-plex" mb={4}>
         <sans-light-italic>
-        Check out the most effective exercises
+        { multiLangTextsFn().hero_subtitle }
         </sans-light-italic>
       </Typography>
       <Button
@@ -49,7 +50,7 @@ const HeroBanner = () => {
         sx={{ backgroundColor: "#FF2625", padding: "10px", letterSpacing: "2px" }}
       >
         <sans-bold>
-        Explore Exercises
+        { multiLangTextsFn().hero_button }
         </sans-bold>
       </Button>
       </div>
@@ -74,7 +75,7 @@ const HeroBanner = () => {
         fontSize="200px"
         marginBottom="-12rem"
       >
-        Exercises
+        { multiLangTextsFn().hero_bg_text }
       </Typography>
       </div>
   );
