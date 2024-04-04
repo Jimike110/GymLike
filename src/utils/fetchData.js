@@ -5,56 +5,68 @@ import multiLangEn from "../data/multi_lang_en.json";
 import multiLangRu from "../data/multi_lang_ru.json";
 
 let allBodyParts;
+let bodyPartImages;
 let selectedExercisesData;
 let multiLangTexts;
-
-const bodyPartImages = 
-[
-  `${process.env.PUBLIC_URL}/icons/all.png`,
-  `${process.env.PUBLIC_URL}/icons/back.png`,
-  `${process.env.PUBLIC_URL}/icons/cardio.png`,
-  `${process.env.PUBLIC_URL}/icons/chest.png`,
-  `${process.env.PUBLIC_URL}/icons/forearm.png`,
-  `${process.env.PUBLIC_URL}/icons/lower-leg.png`,
-  `${process.env.PUBLIC_URL}/icons/neck.png`,
-  `${process.env.PUBLIC_URL}/icons/shoulder.png`,
-  `${process.env.PUBLIC_URL}/icons/upper-arm.png`,
-  `${process.env.PUBLIC_URL}/icons/upper-leg.png`,
-  `${process.env.PUBLIC_URL}/icons/waist.png`,
-]
 
 if (navigator.language === "ru") {
   selectedExercisesData = exercisesDataRussian;
   multiLangTexts = multiLangRu;
   allBodyParts = [
-      "все",
-      "назад",
-      "кардио",
-      "грудь",
-      "нижние рычаги",
-      "голени",
-      "шея",
-      "плечи",
-      "верхняя часть ног",
-      "талия",
+    "все",
+    "назад",
+    "кардио",
+    "грудь",
+    "нижние рычаги",
+    "голени",
+    "шея",
+    "плечи",
+    "верхняя часть ног",
+    "талия",
+  ];
+
+  bodyPartImages = [
+    `${process.env.PUBLIC_URL}/icons/all.png`,
+    `${process.env.PUBLIC_URL}/icons/back.png`,
+    `${process.env.PUBLIC_URL}/icons/cardio.png`,
+    `${process.env.PUBLIC_URL}/icons/chest.png`,
+    `${process.env.PUBLIC_URL}/icons/forearm.png`,
+    `${process.env.PUBLIC_URL}/icons/lower-leg.png`,
+    `${process.env.PUBLIC_URL}/icons/neck.png`,
+    `${process.env.PUBLIC_URL}/icons/shoulder.png`,
+    `${process.env.PUBLIC_URL}/icons/upper-leg.png`,
+    `${process.env.PUBLIC_URL}/icons/waist.png`,
   ];
 } else {
   selectedExercisesData = exercisesData;
   multiLangTexts = multiLangEn;
-  allBodyParts = 
-    [
-      "all",
-      "back",
-      "cardio",
-      "chest",
-      "lower arms",
-      "lower legs",
-      "neck",
-      "shoulders",
-      "upper arms",
-      "upper legs",
-      "waist",
-    ];
+  allBodyParts = [
+    "all",
+    "back",
+    "cardio",
+    "chest",
+    "lower arms",
+    "lower legs",
+    "neck",
+    "shoulders",
+    "upper arms",
+    "upper legs",
+    "waist",
+  ];
+
+  bodyPartImages = [
+    `${process.env.PUBLIC_URL}/icons/all.png`,
+    `${process.env.PUBLIC_URL}/icons/back.png`,
+    `${process.env.PUBLIC_URL}/icons/cardio.png`,
+    `${process.env.PUBLIC_URL}/icons/chest.png`,
+    `${process.env.PUBLIC_URL}/icons/forearm.png`,
+    `${process.env.PUBLIC_URL}/icons/lower-leg.png`,
+    `${process.env.PUBLIC_URL}/icons/neck.png`,
+    `${process.env.PUBLIC_URL}/icons/shoulder.png`,
+    `${process.env.PUBLIC_URL}/icons/upper-arm.png`,
+    `${process.env.PUBLIC_URL}/icons/upper-leg.png`,
+    `${process.env.PUBLIC_URL}/icons/waist.png`,
+  ];
 }
 
 export const multiLang = () => {
@@ -63,11 +75,11 @@ export const multiLang = () => {
 
 export const bodyPartsImagesFn = () => {
   return bodyPartImages;
-}
+};
 
 export const multiLangTextsFn = () => {
   return multiLangTexts;
-}
+};
 
 export const youtubeOptions = {
   method: "GET",
