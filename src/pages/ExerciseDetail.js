@@ -22,7 +22,7 @@ const ExerciseDetail = () => {
       const youtubeSearchUrl = "https://youtube-search-and-download.p.rapidapi.com";
       let query = exerciseDetailData.name;
       if (navigator.language === "ru") {
-        query += " тренировка"; // Added "workout" to the query for Russian language
+        query += " тренировка"; // Added "workout" to the query for Russian language to get meaningful results
       }
   
       const exerciseVideosData = await fetchYoutubeData(`${youtubeSearchUrl}/search?query=${query}&sort=r`, youtubeOptions);

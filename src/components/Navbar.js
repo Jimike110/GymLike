@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Stack } from "@mui/material";
 import Logo from "../assets/images/Logo.png";
+import { multiLang, multiLangTextsFn } from "../utils/fetchData";
 
 const Navbar = () => {
   return (
@@ -32,7 +33,7 @@ const Navbar = () => {
             fontFamily: "Oswald",
           }}
         >
-          Home
+          { multiLangTextsFn().home }
         </Link>
         <a
           href="#exercises"
@@ -42,7 +43,7 @@ const Navbar = () => {
             color: "#3A1212",
           }}
         >
-          Exercises
+          { multiLangTextsFn().exercises }
         </a>
       </Stack>
     </Stack>

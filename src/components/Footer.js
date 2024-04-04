@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import Logo from "../assets/images/Logo-1.png";
+import { multiLangTextsFn } from "../utils/fetchData";
 
 const Footer = () => (
   <Box id="footer" mt="80px" bgcolor="#FFF3F4">
@@ -20,7 +21,7 @@ const Footer = () => (
       textAlign="center"
       pb="40px"
     >
-      Made with ❤️ by Jimike
+      { multiLangTextsFn().footer_text }
     </Typography>
   </Box>
 );

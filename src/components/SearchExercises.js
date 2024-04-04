@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
-import { fetchData, multiLang, bodyPartsImagesFn } from "../utils/fetchData";
+import { fetchData, multiLang, bodyPartsImagesFn, multiLangTextsFn } from "../utils/fetchData";
 import HorizontalScrollbar from "./HorizontalScrollbar";
 
 const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
@@ -44,7 +44,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
         className="ibm-plex"
       >
         <sans-bold>
-          Awesome Exercises You <br /> Should Know
+          { multiLangTextsFn().exercises_section_title_pre } <br /> { multiLangTextsFn().exercises_section_title_post }
         </sans-bold>
       </Typography>
       <Box className="ibm-plex" position="relative" mb="72px">
@@ -59,7 +59,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
           }}
           value={search}
           onChange={(e) => setSearch(e.target.value.toLowerCase())}
-          placeholder="Search Exercises"
+          placeholder={ multiLangTextsFn().search_box_placeholder }
           type="text"
         />
         </sans-regular>
@@ -77,7 +77,7 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
           }}
           onClick={handleSearch}
         >
-          Search
+          { multiLangTextsFn().search_button_text }
         </Button>
       </Box>
       <Box sx={{ position: "relative", width: "100%", p: "20px" }}>
