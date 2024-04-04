@@ -1,3 +1,20 @@
-[
-    
-]
+{
+    "home": "Дом",
+    "exercises": "Упражнения",
+    "hero_supertitle": "ФИТНЕС-КЛУБ",
+    "hero_title_1": "Вспотеть, Улыбнуться ",
+    "hero_title_2": "и Повторить",
+    "hero_subtitle": "Посмотрите самые эффективные упражнения",
+    "hero_button": "Изучите упражнения",
+    "hero_bg_text": "Упражнения",
+    "exercises_section_title_pre": "Отличные упражнения которые вы ",
+    "exercises_section_title_post": "должны знать",
+    "search_box_placeholder": "Поиск упражнений, оборудования, частей тела и т.д.",
+    "search_button_text": "Поиск",
+    "showing_results": "Показаны результаты",
+    "exercise_video_pre": "Смотреть",
+    "exercise_video_post": "видео с упражнениями",
+    "same_muscle_group": "Упражнения, задействующие одну и ту же группу мышц.",
+    "same_equipment": "Упражнения, нацеленные на одно и то же оборудование",
+    "footer_text": "Сделано с любовью Джимике"
+  }
