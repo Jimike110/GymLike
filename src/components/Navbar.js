@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Stack } from "@mui/material";
 import Logo from "../assets/images/Logo.png";
-import { multiLang, multiLangTextsFn } from "../utils/fetchData";
+import { multiLangTextsFn } from "../utils/fetchData";
 
 const Navbar = () => {
   return (
