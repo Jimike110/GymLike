@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Russian from "../data/exercises_ru.json";
+import English from "../data/exercises.json";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import { fetchData, multiLang, bodyPartsImagesFn, multiLangTextsFn } from "../utils/fetchData";
 import HorizontalScrollbar from "./HorizontalScrollbar";
@@ -33,6 +35,25 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
       setExercises(searchedExercises);
     }
   };
+
+
+
+let similar = 0;
+let different = [];
+const check = () => {
+  console.log("running...");
+  for (let i = 0; i < English.length; i++) {
+    if (Russian[i].id === English[i].id) {
+      similar++;
+    } else {
+      different.push(Russian[i].id);
+    }
+  }
+  console.log(similar);
+  console.log(different);
+};
+
+check();
 
   return (
     <Stack alignItems="center" mt="37px" justifyContent="center" p="20px">
